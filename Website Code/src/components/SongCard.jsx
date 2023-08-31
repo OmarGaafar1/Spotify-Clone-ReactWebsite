@@ -6,10 +6,22 @@ import { useDispatch } from 'react-redux'
 import PlayPause from './PlayPause'
 import { playPause , setActiveSong } from '../redux/features/playerSlice'
 
-const SongCard = ({song , i}) => {
-  const activeSong = 'Test';
+const SongCard = ({song , isPlaying , activeSong , data , i}) => {
 
-  console.log("this song's artist is : " + song.subtitle + " === " + song.artists[0].alias);
+  const dispatch = useDispatch();
+
+  const handlePauseClick =() => {
+    dispatch(PlayPause(false))
+
+  }
+
+
+  const handlePlayClick =() => {
+    console.log("Play clicked");
+    dispatch(setActiveSong({song , data, i}))
+    dispatch(PlayPause(true))
+
+  }
 
   return (
     <div className='flex flex-col w-[250px] p-4 bg-white/5
@@ -20,7 +32,14 @@ const SongCard = ({song , i}) => {
         <div className={`absolute inset-0 justify-center items-center bg-black bg-opacity-50 group-hover:flex
          ${activeSong?.title === song.title ? 'flex bg-black bg-opacity-70' : 'hidden'}`}>
         
-          <PlayPause/>
+          <PlayPause
+          handlePauseClick= {handlePauseClick}
+          handlePlayClick= {handlePlayClick}
+          song={song}
+          isPlaying ={isPlaying}
+          activeSong= {activeSong}
+          
+          />
         </div>
         <img src={song.images.coverart}/>
       </div>
