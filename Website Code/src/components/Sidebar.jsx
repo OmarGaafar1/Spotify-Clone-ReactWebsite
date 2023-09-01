@@ -27,7 +27,7 @@ const NavLinks = ({handleClick}) => {
 }
 
 const Sidebar = () => {
-  const [mobileMenueOpen , setMobileMenueOpen] = useState(false);
+  const [mobileMenueOpen , setMobileMenueOpen] = useState(true);
 
 
   return (
@@ -41,17 +41,19 @@ const Sidebar = () => {
 
     <div className='absolute md:hidden  top-6 right-3'>
       {
-        mobileMenueOpen ? (<RiCloseLine className='h-6 w-6 text-white mr-2'/>) 
-        : (<HiOutlineMenu className='h-6 w-6 text-white mr-2'/>)
+        mobileMenueOpen ? (<RiCloseLine onClick={()=>{setMobileMenueOpen(false)}} className='h-6 w-6 text-white mr-2'/>) 
+        : (<HiOutlineMenu onClick={()=>{setMobileMenueOpen(true)}} className='  h-6 w-6 text-white mr-2'/>)
       }
     </div>
 
-    <div className=" hidden md:flex  flex-col w-[240px] py-10 px-4 bg-[#191624]"> 
-      <img src={logo} alt='Logo'  className='w-full h-14 object-contain'/>
-      <NavLinks/>
-    
+    <div className={`absolute top-0 h-screen w-2/3 bg-gradient-to-tl from-white/100 to-[#483d8b] 
+    backdrop-blur-lg z-10 md:hidden smooth-trasition 
+    ${mobileMenueOpen ? 'left-0' : '-left-full'}`}>
+      <img src={logo} alt='Logo' className='w-full h-14 object-contain' />
+      <NavLinks handleClick={()=>{setMobileMenueOpen(false)}} />
     </div>
-    
+
+
    </>
   )
 }
