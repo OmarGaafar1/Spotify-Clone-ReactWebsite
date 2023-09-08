@@ -2,7 +2,6 @@ import React from 'react'
 import {FaPauseCircle , FaPlayCircle} from 'react-icons/fa'
 const PlayPause = ({isPlaying  , activeSong, song , handlePauseClick , handlePlayClick})  => {
 
-  console.log(activeSong.titlle);
   return (
   isPlaying  && activeSong?.title === song.title ?
   <FaPauseCircle
