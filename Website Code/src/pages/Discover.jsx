@@ -11,7 +11,6 @@ const Discover = () => {
     const dispatch = useDispatch();
 
     const {activeSong , isPlaying} = useSelector((state) => state.player);
-    console.log( activeSong);
     
     
     if(isFetching)
@@ -30,7 +29,7 @@ const Discover = () => {
       
       <div className="w-full flex justify-between items-center 
       sm:flex-row flex-col mt-4 mb-10" >
-        <h2 className='text-white font-bold text-left ' >Discover</h2>
+        <h2 className='text-white font-bold text-left text-2xl' >Discover</h2>
         <select
         onChange={()=>{}}
         value=''
@@ -41,7 +40,7 @@ const Discover = () => {
       </div>
 
 
-      <div className='flex flex-wrap sm:justify-start justify-center gap-8'>
+      <div className='flex flex-wrap sm:justify-start justify-center gap-8 w-[100%]'>
   {data.tracks.map((song, i) => {
     if (song.share.image) {
       return (
