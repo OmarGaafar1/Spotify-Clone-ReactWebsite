@@ -1,5 +1,10 @@
 # Spotify-Clone-ReactWebsite
-The "Spotify-Clone-ReactWebsite" project is a web application designed to replicate the functionality of the popular music streaming service, Spotify. It is built using React, a JavaScript library for building user interfaces. The project incorporates several features to provide users with a comprehensive music streaming experience:
+
+# Screenshoot:
+![Screenshot 2023-08-31 165829](https://github.com/OmarGaafar1/Spotify-Clone-ReactWebsite/assets/92587188/6f8562a4-f02e-4b30-9ded-988c317c5985)
+
+
+# The "Spotify-Clone-ReactWebsite" project is a web application designed to replicate the functionality of the popular music streaming service, Spotify. It is built using React, a JavaScript library for building user interfaces. The project incorporates several features to provide users with a comprehensive music streaming experience:
 
 ## API Integration: The application utilizes various APIs to fetch music data. These APIs likely include sources for retrieving information about artists, albums, and tracks, ensuring a rich and diverse music catalog.
 
@@ -14,7 +19,4 @@ The "Spotify-Clone-ReactWebsite" project is a web application designed to replic
 ## User Interface (UI): A user-friendly interface is crucial for a positive user experience. The project likely includes an aesthetically pleasing and intuitive design to navigate through the various features seamlessly.
 
 ### By combining these features, the "Spotify-Clone-ReactWebsite" project aims to deliver a robust and enjoyable music streaming experience for users, mimicking the core functionalities of Spotify within a React-based web application.
-
-# Screenshoot:
-![Screenshot 2023-08-31 165829](https://github.com/OmarGaafar1/Spotify-Clone-ReactWebsite/assets/92587188/6f8562a4-f02e-4b30-9ded-988c317c5985)
 
